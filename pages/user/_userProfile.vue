@@ -1,6 +1,7 @@
 <template>
   <main class="main">
     User Profile
+    <strong>{{userId}}</strong>
     <!--    {{userData}}-->
     <div class="userInfo">
       {{ userData.avatar_url }}
@@ -11,9 +12,11 @@
       {{ userData.id }}
       <div>---------</div>
       <div>
-        <ul  >
+        <ul>
           <li v-for="repo in getUser.repos" :key="repo.id">
-            {{ repo.full_name }}
+            <nuxt-link :to="'/repo/'+repo.id">
+              {{ repo.full_name }}
+            </nuxt-link>
           </li>
 
         </ul>
@@ -30,6 +33,7 @@ export default {
     return {
       searchTxt: "",
       userData: this.$store.state.user.user,
+      userId : this.$route.params.userProfile
     }
   },
   computed: {
