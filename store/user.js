@@ -13,11 +13,6 @@ export default {
         state[key] = payload[key]
       })
     },
-    updateUser(state, payload) {
-      // newUser ? (state.user = newUser.user) : (state.user = state.user)
-      console.log("update user")
-      state.user = payload ? payload.user : state.user
-    },
   },
   actions: {
     async searchUsers({state, commit}, payload) {

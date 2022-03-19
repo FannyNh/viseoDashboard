@@ -4,7 +4,7 @@
     <div v-for="user in getSearchResults"
          :key="user.id">
       <div>
-        <div @click="updateUser({user : user})">
+        <div @click="updateState({user : user})">
           <NuxtLink :to="'/user/'+user.id" >
             <p>{{ user.login }}</p>
           </NuxtLink>
@@ -26,12 +26,6 @@ export default {
       // "user", ["updateState"],
       {
         updateState: 'user/updateState'
-      }
-    ),
-    ...mapMutations(
-      // "user", ["updateState"],
-      {
-        updateUser: 'user/updateUser'
       }
     )
   }
