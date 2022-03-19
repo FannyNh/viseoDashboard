@@ -7,7 +7,17 @@ export default {
             avatar_url: "",
             login: "",
             id: "",
-            repos: []
+            repos: [],
+            repos_url: ""
+        },
+        repo: {
+            name: "",
+            language: "",
+            stargazers_count: "",
+            description: "",
+            created_at: "",
+            updated_at: "",
+            url: ""
         }
     }),
     mutations: {
@@ -42,11 +52,7 @@ export default {
         },
         async saveUser({state, commit}, payload) {
             commit('updateState', {
-                user: {
-                    avatar_url: payload.avatar_url,
-                    login: payload.login,
-                    id: payload.id,
-                }
+                user: payload
             })
             try {
                 const res = await this.$axios.$get(payload.repos_url)
@@ -65,7 +71,7 @@ export default {
                     loading: false
                 })
             }
-        }
+        },
     },
     getters: {
         getSearchResults(state) {
@@ -74,7 +80,12 @@ export default {
 
         getUser(state) {
             return state.user
+        },
+
+        getRepo(state) {
+            return state.repo
         }
     }
+
 }
 
