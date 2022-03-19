@@ -1,19 +1,29 @@
 <template>
   <main class="main">
     User Profile
-<!--    {{userData}}-->
+    <!--    {{userData}}-->
     <div class="userInfo">
-      {{userData.avatar_url}}
+      {{ userData.avatar_url }}
       <div>---------</div>
-      {{userData.login}}
+      {{ userData.login }}
     </div>
     <div class="repositories">
-      {{userData.id}}
+      {{ userData.id }}
       <div>---------</div>
+      <div>
+        <ul  >
+          <li v-for="repo in getUser.repos" :key="repo.id">
+            {{ repo.full_name }}
+          </li>
+
+        </ul>
+      </div>
     </div>
   </main>
 </template>
 <script>
+import {mapGetters} from "vuex";
+
 export default {
   name: "IndexPage",
   data() {
@@ -21,6 +31,9 @@ export default {
       searchTxt: "",
       userData: this.$store.state.user.user,
     }
+  },
+  computed: {
+    ...mapGetters("user", ["getUser"]),
   },
 };
 </script>
