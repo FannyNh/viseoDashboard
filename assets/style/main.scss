@@ -1,5 +1,123 @@
+@import "normalize";
+@import "fonts";
 @import "variables";
 
+//paddings
+//__small
+.pt-8{
+  padding-top: 8px;
+}
+.pb-8{
+  padding-bottom: 8px;
+}
+.pl-8{
+  padding-left: 8px;
+}
+.pr-8{
+  padding-right: 8px;
+}
+.p-8{
+  padding: 8px;
+}
+//__medium
+.pt-16{
+  padding-top: 16px;
+}
+.pb-16{
+  padding-bottom: 16px;
+}
+.pl-16{
+  padding-left: 16px;
+}
+.pr-16{
+  padding-right: 16px;
+}
+.p-16{
+  padding: 16px;
+}
+//margins
+//__small
+.mt-8{
+  margin-top: 8px;
+}
+.mb-8{
+  margin-bottom: 8px;
+}
+.ml-8{
+  margin-left: 8px;
+}
+.mr-8{
+  margin-right: 8px;
+}
+.m-8{
+  margin: 8px;
+}
+//__medium
+.mt-16{
+  margin-top: 16px;
+}
+.mb-16{
+  margin-bottom: 16px;
+}
+.ml-16{
+  margin-left: 16px;
+}
+.mr-16{
+  margin-right: 16px;
+}
+.m-16{
+  margin: 16px;
+}
+//__large
+.mt-32{
+  margin-top: 32px;
+}
+.mb-32{
+  margin-bottom: 32px;
+}
+.ml-32{
+  margin-left: 32px;
+}
+.mr-32{
+  margin-right: 32px;
+}
+
+.m-32{
+  margin: 32px;
+}
+
+html,body, #__nuxt, #__layout{
+  height:100%!important;
+  width: 100%!important;
+}
+h1,h2,h3,h4,h5,strong, button{
+  font-family: $font-family-1;
+}
+span,a,p,ul,li,div,b,input{
+  font-family: $font-family-2;
+}
+a{
+  color: $blue;
+}
+h3{
+  font-size: $font-size-xl;
+  font-weight: $bold-font-weight;
+  text-align: center;
+  color: $blue;
+}
+//layout
+.layout{
+  height: 100%;
+  &.layout-default {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas:
+        "header"
+        "main";
+  }
+}
 
 
 // tools debug

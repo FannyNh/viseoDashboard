@@ -1,21 +1,17 @@
-$blue: #1C3B7F;
-$sky-blue: #E7F1F9;
-$light-blue: #F3F8FC;
-$green: #5AAA9F;
-$yellow: #ECA93B;
-$orange: #e0813a;
-$dark-orange: #E28130;
+$blue: rgb(7, 71, 166);
+$light-blue : rgb(227, 237, 252);
 $grey: #787B80;
 $dark-grey: #282A34;
-$white: #fff;
-$black: #000;
+$white: rgb(255, 255, 255);
+$black: #172b4d;
 
 
 
 $border-radius-big: 30px;
 $border-radius-small: 3px;
 
-$font-family: "Encode Sans Expanded", Arial, Helvetica, sans-serif;
+$font-family-1: "Roboto", Arial, Helvetica, sans-serif;
+$font-family-2: "Open sans", Arial, Helvetica, sans-serif;
 
 $light-font-weight : 300;
 $regular-font-weight: 400;
@@ -34,6 +30,7 @@ $font-size-xl: 30px;
 // breakpoint
 $xs: 0;
 $sm: 576px;
+$md: 768px;
 $md: 768px;
 $lg: 992px;
 $xl: 1200px;
