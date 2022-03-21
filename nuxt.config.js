@@ -95,9 +95,8 @@ export default {
 
   googleFonts: {
     families: {
-      'Encode+Sans+Expanded': {
-        wght: [100, 400, 600],
-      },
+      Roboto: true,
+      'Open+Sans': true,
     },
   },
 }
